@@ -5,7 +5,9 @@
 # @example
 #   include system_hardening::remove_telnet_client
 class system_hardening::remove_telnet_client {
-  package { 'telnet':
-    ensure => 'purged',
+    if $system_hardening::remove_telnet_client {
+      package { 'telnet':
+      ensure => 'purged',
+    }
   }
 }
