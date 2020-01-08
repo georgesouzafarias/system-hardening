@@ -1,2 +1,2 @@
 ---
-system-hardening::remove_telnet_client: true
+system_hardening::remove_telnet_client: true
