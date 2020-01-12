@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'system_hardening::remove_telnet_client' do
+describe 'system_hardening::remote_access_controls' do
   on_supported_os.each do |os, os_facts|
     context "on #{os}" do
       let(:facts) { os_facts }
