@@ -7,6 +7,10 @@
 #
 # @example
 #   include system_hardening
-class system_hardening ( Boolean $remove_telnet_client) {
+class system_hardening (
+  Boolean $remove_telnet_client,
+  Boolean $remove_telnet_server,
+  ) {
   contain system_hardening::remove_telnet_client
+  contain system_hardening::remove_telnet_server
 }
