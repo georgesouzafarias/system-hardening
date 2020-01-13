@@ -13,4 +13,12 @@ class system_hardening::remote_access_controls {
     package { 'telnet':
     ensure => 'purged',
   }}
+  if $system_hardening::remove_rsh_server {
+    package { 'rsh-server':
+    ensure => 'purged',
+  }}
+  if $system_hardening::remove_rsh_client {
+    package { 'rsh':
+    ensure => 'purged',
+  }}
 }
