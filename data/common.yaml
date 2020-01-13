@@ -3,3 +3,5 @@ system_hardening::remove_telnet_client: true
 system_hardening::remove_telnet_server: true
 system_hardening::remove_rsh_server: true
 system_hardening::remove_rsh_client: true
+system_hardening::remove_nis_server: true
+system_hardening::remove_nis_client: true

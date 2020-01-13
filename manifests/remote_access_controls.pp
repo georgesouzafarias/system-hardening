@@ -21,4 +21,12 @@ class system_hardening::remote_access_controls {
     package { 'rsh':
     ensure => 'purged',
   }}
+  if $system_hardening::remove_nis_server {
+    package { 'ypserv':
+    ensure => 'purged',
+  }}
+  if $system_hardening::remove_nis_client {
+    package { 'ypbind':
+    ensure => 'purged',
+  }}
 }

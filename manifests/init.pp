@@ -11,6 +11,12 @@
 ## @param remove_rsh_client
 #   Enables the control that will remove the rsh client. Default value: true.
 #
+## @param remove_nis_server
+#   Enables the control that will remove the nis server. Default value: true.
+#
+## @param remove_nis_client
+#   Enables the control that will remove the nis client. Default value: true.
+#
 # @example
 #   include system_hardening
 class system_hardening (
@@ -18,6 +24,8 @@ class system_hardening (
   Boolean $remove_telnet_server,
   Boolean $remove_rsh_server,
   Boolean $remove_rsh_client,
+  Boolean $remove_nis_server,
+  Boolean $remove_nis_client,
   ) {
   contain system_hardening::remote_access_controls
 }
